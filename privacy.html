@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSDescr: політика приватності</title>
+<style>
+  body { font-family: system-ui, "Segoe UI", Arial, sans-serif; line-height: 1.55; color: #1f2933; max-width: 760px; margin: 0 auto; padding: 32px 18px 60px; }
+  h1 { color: #134e36; margin-bottom: 4px; }
+  h2 { color: #134e36; margin-top: 30px; border-bottom: 2px solid #c9d6cf; padding-bottom: 4px; }
+  .sub { color: #6b7280; margin-top: 0; }
+  li { margin: 6px 0; }
+  a { color: #1b6b4a; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 3px; }
+  footer { margin-top: 40px; color: #6b7280; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<h1>Політика приватності SSDescr</h1>
+<p class="sub">Діє з 20 жовтня 2026 року. <a href="index.html">На головну</a> · <a href="#en">English summary</a></p>
+
+<h2>Коротко</h2>
+<p>SSDescr працює <strong>на вашому комп'ютері</strong>. У програми немає власних серверів, реклами й аналітики. Розробник не отримує ні
+ваших фото, ні вашої пошти. Програма лише передає дані тим службам Google, якими ви самі користуєтесь через неї.</p>
+
+<h2>Які дані отримує програма</h2>
+<ul>
+  <li><strong>Від входу через Google:</strong> ваше ім'я, адресу електронної пошти, ідентифікатор акаунта (і фото профілю, якщо Google його
+  надасть). Програма запитує лише ці права (<code>openid</code>, <code>email</code>, <code>profile</code>). Пароль Google до програми
+  не потрапляє: ви вводите його на сторінці Google.</li>
+  <li><strong>Ваші фото й відео:</strong> програма читає файли, які ви самі виділили в ній.</li>
+  <li><strong>Ваш ключ Gemini:</strong> ви вставляєте його самі в налаштуваннях.</li>
+</ul>
+
+<h2>Що зберігається і де</h2>
+<p>Усе зберігається лише на вашому комп'ютері, у профілі користувача Windows (теці <code>SSDescr</code>):</p>
+<ul>
+  <li>дані про вхід (ім'я, пошта, «токен» для входу без пароля);</li>
+  <li>налаштування й ваш ключ Gemini;</li>
+  <li>лічильник використання й ваші правила для слів.</li>
+</ul>
+<p>Заголовки, описи й ключові слова записуються у ваші файли, які програма не завантажує нікуди.</p>
+
+<h2>Куди дані передаються</h2>
+<ul>
+  <li><strong>Google (вхід):</strong> щоб ви могли ввійти.</li>
+  <li><strong>Google Gemini API:</strong> коли ви натискаєте «Описати», програма надсилає <em>зменшену копію вибраного вами фото</em> (або кадру
+  з відео) на сервіс Gemini, щоб він склав опис. Коли ви просите переклад, надсилаються слова з поля перекладу. Це відбувається за вашим
+  власним ключем. Розробник до цих запитів доступу не має. Їх обробляє Google за своїми
+  <a href="https://policies.google.com/privacy">правилами</a>.</li>
+  <li><strong>Сайти ExifTool і ffmpeg:</strong> при першому запуску програма скачує звідти допоміжні програми. Ваших даних при цьому не передається.</li>
+  <li>Більше нікуди. Дані не продаються й не передаються третім особам.</li>
+</ul>
+
+<h2>Як видалити дані й відкликати доступ</h2>
+<ul>
+  <li>У налаштуваннях програми (шестерня) натисніть <strong>«Вийти з акаунта»</strong>: збережений вхід буде забуто й відкликано.</li>
+  <li>Щоб прибрати все, видаліть теку <code>SSDescr</code> у профілі користувача (<code>%APPDATA%\SSDescr</code>) та теку самої програми.</li>
+  <li>Відкликати доступ можна й на сторінці Google:
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+</ul>
+
+<h2>Діти</h2>
+<p>Програма не призначена для дітей і не збирає даних про них навмисно.</p>
+
+<h2>Зміни політики</h2>
+<p>Якщо правила зміняться, ця сторінка буде оновлена, а дата вгорі зміниться.</p>
+
+<h2>Зв'язок</h2>
+<p>Питання про приватність: <a href="mailto:greegav@gmail.com">greegav@gmail.com</a>.</p>
+
+<h2 id="en">English summary</h2>
+<p>SSDescr is a desktop application for Windows that describes photos and videos for stock agencies. It runs on your computer and
+has no servers of its own, no ads and no analytics.</p>
+<ul>
+  <li><strong>Google sign-in:</strong> the app asks only for your name, email address and account ID (scopes <code>openid</code>,
+  <code>email</code>, <code>profile</code>). Your Google password is never seen by the app.</li>
+  <li><strong>Storage:</strong> sign-in data, settings and your own Gemini API key are stored only on your computer, in your user profile.</li>
+  <li><strong>Sharing:</strong> when you press the describe button, a reduced copy of the photo you selected is sent to the Google Gemini API using
+  your own API key, and Google processes it under its own privacy policy. The developer does not receive it. Nothing is sold or shared with
+  third parties.</li>
+  <li><strong>Deletion:</strong> use “Sign out” in the app settings, delete the <code>%APPDATA%\SSDescr</code> folder, or revoke access at
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+  <li><strong>Downloads:</strong> on first start the app downloads the helper tools ExifTool and ffmpeg from their official sites; no personal data is sent.</li>
+  <li><strong>Contact:</strong> <a href="mailto:greegav@gmail.com">greegav@gmail.com</a>.</li>
+</ul>
+
+<footer>SSDescr. Політика оновлена 20 жовтня 2026 року.</footer>
+
+</body>
+</html>
